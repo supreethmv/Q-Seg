@@ -22,8 +22,8 @@ The process of Q-Seg utilizing the D-Wave quantum annealer is illustrated in the
 3. **Qubit Mapping**: The `minorminer` tool maps the logical qubits in the QUBO to the physical qubits in the D-Wave hardware.
 4. **Problem Submission and Queuing**: The problem instance is transmitted over the internet and queued on the shared D-Wave device.
 5. **Quantum Annealing**: The Quantum Processing Unit (QPU) on the D-Wave device performs the annealing process.
-6. **Solution Extraction**: The final step involves retrieving the set of samples produced by the QPU and extracting the optimal solution based on the lowest energy state.
-7. **Solution Decode**: The lowest energy binary solution string is decoded into a binary segmentation mask.
+6. **Solution Extraction**: The retrieval of the sample set produced by the QPU and extracting the optimal solution based on the lowest energy state.
+7. **Solution Decode**: The final step involves lowest energy binary solution string being decoded into a binary segmentation mask.
 
 ![Q-Seg Operational Pipeline](figures/operational_pipeline.png)
 *Figure: Operational pipeline of Q-Seg using D-Wave quantum annealer.*
