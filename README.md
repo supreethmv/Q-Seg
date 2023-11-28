@@ -47,7 +47,7 @@ pip install -r requirements.txt
 Navigate to the `examples` directory and open the Jupyter Notebook:
 ```
 cd examples
-jupyter notebook q_seg_toy_example.ipynb
+jupyter notebook q_seg_pipeline.ipynb
 ```
 
 Follow the instructions in the notebook to perform image segmentation on a sample grayscale image.
