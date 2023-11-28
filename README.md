@@ -60,6 +60,23 @@ Q-Seg/
 └── README.md # Documentation and usage instructions
 ```
 
+## Project Structure
+
+### Modules in the `qseg` Package
+- **graph_utils.py**: Contains `image_to_grid_graph` and `draw` functions for graph-related operations.
+- **dwave_utils.py**: Includes `dwave_solver` and `annealer_solver` functions, dedicated to D-Wave specific operations and quantum annealing.
+- **utils.py**: Features the `decode_binary_string` function, useful for general utility purposes across the project.
+
+### Notebook
+- **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of Q-Seg functions on a toy example, providing a step-by-step walkthrough of the algorithm.
+
+### Data and Figures Directories
+- Store any specific data used in the notebook in the `data` directory.
+- Place figures and diagrams for documentation in the `figures` directory.
+
+### Dependencies
+- List all required dependencies in the `requirements.txt` file, such as `qiskit_optimization`, `pylatexenc`, `dwave-ocean-sdk`, and `gurobipy`.
+
 
 
 ## Citation
@@ -83,3 +100,11 @@ Your Contact Information
 <!--[![Author2](path_to_thumbnail2.jpg)](https://author2website.com)-->
 
 <!--*Click on the images to visit the authors' websites.*-->
+
+
+
+
+
+
+
+
