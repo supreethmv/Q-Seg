@@ -3,14 +3,30 @@
 ## Overview
 Q-Seg is an innovative unsupervised image segmentation method leveraging quantum annealing, specifically designed for the D-Wave Advantage quantum hardware. It addresses pixel-wise segmentation by formulating it as a graph-cut optimization task. Q-Seg stands out for its scalability and efficiency, surpassing classical methods in runtime performance and offering competitive segmentation quality, particularly in Earth Observation image analysis.
 
-![Q-Seg Pipeline](figures/pipeline_overview.png)
-*Figure: Overview of the Q-Seg segmentation pipeline.*
+![Q-Seg Overview](figures/overview_pipeline.png)
+*Figure: Overview of the Q-Seg algorithm.*
 
 ## Features
 - Unsupervised segmentation using quantum annealing.
 - Efficient use of D-Wave's qubit topology for scalability.
 - Superior runtime performance compared to classical optimizers like Gurobi.
 - Effective in scenarios with limited labeled data, such as flood mapping and forest coverage detection.
+
+## Operational Pipeline of Q-Seg
+
+The process of Q-Seg utilizing the D-Wave quantum annealer is illustrated in the figure below. The pipeline consists of several key steps:
+
+1. **Converting the Image to Graph**: The image is first translated into an undirected, weighted, connected grid-graph wtih the pixels correspond to vertices and the edge weights are assigned between neighboring pixels using an appropriate similarity metric.
+2. **Reformulating the Minimum Cut Problem**: The segmentation task is converted into a Quadratic Unconstrained Binary Optimization (QUBO) problem.
+2. **Remote Access Authentication**: A private token is used for secure remote access to the D-Wave quantum annealer.
+3. **Qubit Mapping**: The `minorminer` tool maps the logical qubits in the QUBO to the physical qubits in the D-Wave hardware.
+4. **Problem Submission and Queuing**: The problem instance is transmitted over the internet and queued on the shared D-Wave device.
+5. **Quantum Annealing**: The Quantum Processing Unit (QPU) on the D-Wave device performs the annealing process.
+6. **Solution Extraction**: The final step involves retrieving the set of samples produced by the QPU and extracting the optimal solution based on the lowest energy state.
+7. **Solution Decode**: The lowest energy binary solution string is decoded into a binary segmentation mask.
+
+![Q-Seg Operational Pipeline](figures/operational_pipeline.png)
+*Figure: Operational pipeline of Q-Seg using D-Wave quantum annealer.*
 
 ## Getting Started
 
