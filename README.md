@@ -1,4 +1,4 @@
-# Q-Seg: Quantum Annealing-Based Unsupervised Image Segmentation
+# Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation
 
 ## Overview
 Q-Seg is a novel unsupervised image segmentation method leveraging quantum annealing, specifically designed for the existing D-Wave Advantage quantum hardware. It addresses pixel-wise segmentation by formulating it as a graph-cut optimization task. Q-Seg stands out for its scalability and efficiency, surpassing classical methods in runtime performance and offering competitive segmentation quality, particularly in Earth Observation image analysis.
