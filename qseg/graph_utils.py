@@ -2,6 +2,27 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
+def gaussian_similarity(a, b, sigma):
+  """
+  Calculate the Gaussian similarity score between two values.
+
+  The Gaussian similarity function is often used in image processing and graph-based algorithms
+  to measure how close or similar two values (like pixel intensities) are to each other.
+
+  Parameters:
+  a (float): The first value.
+  b (float): The second value.
+  sigma (float): The standard deviation used in the Gaussian function. This parameter controls
+                 how quickly the similarity score decreases with the difference between a and b.
+
+  Returns:
+  float: The Gaussian similarity score between a and b.
+  """
+  gaussian_similairity_score = np.exp(-((a - b)**2) / (2 * sigma**2))
+  return gaussian_similairity_score
+
+
 def image_to_grid_graph(gray_img, sigma=0.5):
   """
   Convert a grayscale image to a grid graph with Gaussian similarity as edge weights.
@@ -24,14 +45,14 @@ def image_to_grid_graph(gray_img, sigma=0.5):
     nodes[i] = gray_img[x,y]
     if x > 0:
       j = (x-1)*w + y
-      weight = 1-np.exp(-((gray_img[x,y] - gray_img[x-1,y])**2) / (2 * sigma**2))      # Gaussian similarity
+      weight = 1-gaussian_similarity(gray_img[x,y], gray_img[x-1,y])
       edges.append((i, j, weight))
       nx_elist.append(((x,y),(x-1,y),np.round(weight,2)))
       if min_weight>weight:min_weight=weight
       if max_weight<weight:max_weight=weight
     if y > 0:
       j = x*w + y-1
-      weight = 1-np.exp(-((gray_img[x,y] - gray_img[x,y-1])**2) / (2 * sigma**2))      # Gaussian similarity
+      weight = 1-gaussian_similarity(gray_img[x,y], gray_img[x,y-1])
       edges.append((i, j, weight))
       nx_elist.append(((x,y),(x,y-1),weight))
       if min_weight>weight:min_weight=weight
