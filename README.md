@@ -113,7 +113,7 @@ Your Contact Information
 ## Contributors
 
 [![Supreeth Mysore Venkatesh](_repo_data/supreeth_thumbnail.png)](https://www.linkedin.com/in/supreethmv/)
-<!--[![Antonio Macaluso](data/antonio_thumbnail.png)](https://www.linkedin.com/in/antonio-macaluso/)-->
+[![Antonio Macaluso](data/antonio_thumbnail.png)](https://www.linkedin.com/in/antonio-macaluso/)
 
 <!--*Click on the images to visit the authors' websites.*-->
 
