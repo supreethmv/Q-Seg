@@ -110,12 +110,13 @@ Describe the license under which your project is released.
 Your Contact Information
 
 
-<!--## Contributors-->
+## Contributors
 
-<!--[![Author1](path_to_thumbnail1.jpg)](https://author1website.com)-->
-<!--[![Author2](path_to_thumbnail2.jpg)](https://author2website.com)-->
+[![Supreeth Mysore Venkatesh](_repo_data/supreeth_thumbnail.png)](https://www.linkedin.com/in/supreethmv/)
+<!--[![Antonio Macaluso](data/antonio_thumbnail.png)](https://www.linkedin.com/in/antonio-macaluso/)-->
 
 <!--*Click on the images to visit the authors' websites.*-->
+
 
 
 
