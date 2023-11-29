@@ -57,27 +57,27 @@ Follow the instructions in the notebook to perform image segmentation on a sampl
 ```
 Q-Seg/
 │
-├── qseg/ # Source code for Q-Seg
+├── qseg/
 │ ├── init.py
 │ ├── graph_utils.py
 │ ├── dwave_utils.py
 │ └── utils.py
 │
-├── notebooks/ # Jupyter notebooks with example usage and experiments
-│ ├── q_seg_pipeline.ipynb # Step-by-step walkthrough of the algorithm
-│ ├── Annealer_vs_Gurobi_experiments.ipynb # Experiments on synthetic dataset
-│ └── plots.ipynb # Generating plots from experiment results
+├── notebooks/ 
+│ ├── q_seg_pipeline.ipynb
+│ ├── Annealer_vs_Gurobi_experiments.ipynb 
+│ └── plots.ipynb 
 │
-├── data/ # Sample data and results
+├── data/ 
 │ ├── sample_image.jpg
 │ └── results/ # Logged results from experiments
 │
-├── figures/ # Figures and diagrams
+├── figures/ 
 │ └── operational_pipeline.png
 │ └── overview_pipeline.png
 │
-├── requirements.txt # List of Python package dependencies
-└── README.md # Documentation and usage instructions
+├── requirements.txt 
+└── README.md 
 ```
 
 ## Project Structure
