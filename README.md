@@ -58,7 +58,7 @@ Follow the instructions in the notebook to perform image segmentation on a sampl
 Q-Seg/
 │
 ├── qseg/
-│ ├── init.py
+│ ├── __init__.py
 │ ├── graph_utils.py
 │ ├── dwave_utils.py
 │ └── utils.py
