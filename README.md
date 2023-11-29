@@ -98,16 +98,26 @@ Q-Seg/
 ## Citation
 If you find Q-Seg useful in your research, please consider citing our paper:
 ```
-Citation details here...
+@article{venkatesh2023q,
+  title={Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation},
+  author={Venkatesh, Supreeth Mysore and Macaluso, Antonio and Nuske, Marlon and Klusch, Matthias and Dengel, Andreas},
+  journal={arXiv preprint arXiv:2311.12912},
+  year={2023}
+}
 ```
 
 
 ## License
-Describe the license under which your project is released.
+
+This project is licensed under the GNU General Public License v2.1 - see the [LICENSE](LICENSE) file for details.
 
 
 ## Contact
-Your Contact Information
+
+For any inquiries, please reach out to:
+
+- Supreeth Mysore Venkatesh: supreeth.mysore@dfki.de
+- Antonio Macaluso: antonio.macaluso@dfki.de
 
 
 ## Contributors
