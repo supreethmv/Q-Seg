@@ -31,7 +31,7 @@ The process of Q-Seg utilizing the D-Wave quantum annealer is illustrated in the
 ## Getting Started
 
 ### Prerequisites
-- Python 3.10
+- Python 3.9.11
 - Jupyter Notebook
 - Required Python packages: `numpy`, `networkx`, `qiskit`, `dwave-system`
 
