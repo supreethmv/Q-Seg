@@ -63,14 +63,18 @@ Q-Seg/
 │ ├── dwave_utils.py
 │ └── utils.py
 │
-├── examples/ # Jupyter notebook with example usage
-│ └── q_seg_pipeline.ipynb
+├── notebooks/ # Jupyter notebooks with example usage and experiments
+│ ├── q_seg_pipeline.ipynb # Step-by-step walkthrough of the algorithm
+│ ├── Annealer_vs_Gurobi_experiments.ipynb # Experiments on synthetic dataset
+│ └── plots.ipynb # Generating plots from experiment results
 │
-├── data/ # Sample data 
-│ └── sample_image.jpg
+├── data/ # Sample data and results
+│ ├── sample_image.jpg
+│ └── results/ # Logged results from experiments
 │
 ├── figures/ # Figures and diagrams
-│ └── pipeline_overview.png
+│ └── operational_pipeline.png
+│ └── overview_pipeline.png
 │
 ├── requirements.txt # List of Python package dependencies
 └── README.md # Documentation and usage instructions
@@ -85,13 +89,18 @@ Q-Seg/
 
 ### Notebook
 - **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of Q-Seg functions on a toy example, providing a step-by-step walkthrough of the algorithm.
+- **Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
+- **plots.ipynb**: Used for parsing logged data and generating plots as shown in the paper.
 
 ### Data and Figures Directories
-- Store any specific data used in the notebook in the `data` directory.
-- Place figures and diagrams for documentation in the `figures` directory.
+- Store specific data and results in the `data` directory, including a subdirectory `results` with our experiment results for different seeds.
+- Place figures and diagrams in the `figures` directory.
+
 
 ### Dependencies
 - List all required dependencies in the `requirements.txt` file, such as `qiskit_optimization`, `pylatexenc`, `dwave-ocean-sdk`, and `gurobipy`.
+
+
 
 
 
