@@ -65,7 +65,7 @@ Q-Seg/
 │ ├── dwave_utils.py
 │ └── utils.py
 │
-├── example/ 
+├── examples/ 
 │ ├── q_seg_pipeline.ipynb
 │ ├── Annealer_vs_Gurobi_experiments.ipynb 
 │ └── plots.ipynb 
@@ -89,7 +89,7 @@ Q-Seg/
 - **dwave_utils.py**: Includes `dwave_solver` and `annealer_solver` functions, dedicated to D-Wave specific operations and quantum annealing.
 - **utils.py**: Features the `decode_binary_string` function, useful for general utility purposes across the project.
 
-### Notebook
+### Example Notebooks
 - **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of Q-Seg functions on a toy example, providing a step-by-step walkthrough of the algorithm.
 
 -**Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
