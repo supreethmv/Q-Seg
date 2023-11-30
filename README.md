@@ -65,7 +65,7 @@ Q-Seg/
 │ ├── dwave_utils.py
 │ └── utils.py
 │
-├── notebooks/ 
+├── example/ 
 │ ├── q_seg_pipeline.ipynb
 │ ├── Annealer_vs_Gurobi_experiments.ipynb 
 │ └── plots.ipynb 
@@ -91,7 +91,8 @@ Q-Seg/
 
 ### Notebook
 - **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of Q-Seg functions on a toy example, providing a step-by-step walkthrough of the algorithm.
-- **Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
+
+-**Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
 - **plots.ipynb**: Used for parsing logged data and generating plots as shown in the paper.
 
 ### Data and Figures Directories
