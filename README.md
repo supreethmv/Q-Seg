@@ -1,7 +1,9 @@
 # Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation
 
+[*Venkatesh, S. M., Macaluso, A., Nuske, M., Klusch, M., & Dengel, A. (2023). Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation. arXiv preprint arXiv:2311.12912.*](https://arxiv.org/abs/2311.12912)
+
 ## Overview
-Q-Seg is a novel unsupervised image segmentation method leveraging quantum annealing, specifically designed for the existing D-Wave Advantage quantum hardware. It addresses pixel-wise segmentation by formulating it as a graph-cut optimization task. Q-Seg stands out for its scalability and efficiency, surpassing classical methods in runtime performance and offering competitive segmentation quality, particularly in Earth Observation image analysis.
+[Q-Seg](https://arxiv.org/abs/2311.12912) is a novel unsupervised image segmentation method leveraging quantum annealing, specifically designed for the existing D-Wave Advantage quantum hardware. It addresses pixel-wise segmentation by formulating it as a graph-cut optimization task. Q-Seg stands out for its scalability and efficiency, surpassing classical methods in runtime performance and offering competitive segmentation quality, particularly in Earth Observation image analysis.
 
 ![Q-Seg Overview](figures/overview_pipeline.png)
 *Figure: Overview of the Q-Seg algorithm.*
@@ -58,12 +60,12 @@ Follow the instructions in the notebook to perform image segmentation on a sampl
 Q-Seg/
 │
 ├── qseg/
-│ ├── init.py
+│ ├── __init__.py
 │ ├── graph_utils.py
 │ ├── dwave_utils.py
 │ └── utils.py
 │
-├── notebooks/ 
+├── examples/ 
 │ ├── q_seg_pipeline.ipynb
 │ ├── Annealer_vs_Gurobi_experiments.ipynb 
 │ └── plots.ipynb 
@@ -87,9 +89,10 @@ Q-Seg/
 - **dwave_utils.py**: Includes `dwave_solver` and `annealer_solver` functions, dedicated to D-Wave specific operations and quantum annealing.
 - **utils.py**: Features the `decode_binary_string` function, useful for general utility purposes across the project.
 
-### Notebook
+### Example Notebooks
 - **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of Q-Seg functions on a toy example, providing a step-by-step walkthrough of the algorithm.
-- **Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
+
+-**Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
 - **plots.ipynb**: Used for parsing logged data and generating plots as shown in the paper.
 
 ### Data and Figures Directories
