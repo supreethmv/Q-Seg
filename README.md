@@ -1,11 +1,14 @@
 # Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation
 
-[*Venkatesh, S. M., Macaluso, A., Nuske, M., Klusch, M., & Dengel, A. (2023). Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation. arXiv preprint arXiv:2311.12912.*](https://arxiv.org/abs/2311.12912)
+Published in the Journal Computer Graphics and Applications.
+[*S. M. Venkatesh, A. Macaluso, M. Nuske, M. Klusch and A. Dengel, "Q-Seg: Quantum Annealing-Based Unsupervised Image Segmentation," in IEEE Computer Graphics and Applications, doi: 10.1109/MCG.2024.3455012.*](https://ieeexplore.ieee.org/document/10669751)
+
+Preprint: [*Venkatesh, S. M., Macaluso, A., Nuske, M., Klusch, M., & Dengel, A. (2023). Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation. arXiv preprint arXiv:2311.12912.*](https://arxiv.org/abs/2311.12912)
 
 ## Overview
-[Q-Seg](https://arxiv.org/abs/2311.12912) is a novel unsupervised image segmentation method leveraging quantum annealing, specifically designed for the existing D-Wave Advantage quantum hardware. It addresses pixel-wise segmentation by formulating it as a graph-cut optimization task. Q-Seg stands out for its scalability and efficiency, surpassing classical methods in runtime performance and offering competitive segmentation quality, particularly in Earth Observation image analysis.
+[Q-Seg](https://ieeexplore.ieee.org/document/10669751) is a novel unsupervised image segmentation method leveraging quantum annealing, specifically designed for the existing D-Wave Advantage quantum hardware. It addresses pixel-wise segmentation by formulating it as a graph-cut optimization task. Q-Seg stands out for its scalability and efficiency, surpassing classical methods in runtime performance and offering competitive segmentation quality, particularly in Earth Observation image analysis.
 
-![Q-Seg Overview](figures/overview_pipeline.png)
+![Q-Seg Overview](figures/overview.jpg)
 *Figure: Overview of the Q-Seg algorithm.*
 
 ## Features
@@ -27,7 +30,7 @@ The process of Q-Seg utilizing the D-Wave quantum annealer is illustrated in the
 6. **Solution Extraction**: The retrieval of the sample set produced by the QPU and extracting the optimal solution based on the lowest energy state.
 7. **Solution Decode**: The final step involves lowest energy binary solution string being decoded into a binary segmentation mask.
 
-![Q-Seg Operational Pipeline](figures/operational_pipeline.png)
+![Q-Seg Operational Pipeline](figures/pipeline_time_analysis.jpg)
 *Figure: Operational pipeline of Q-Seg using D-Wave quantum annealer.*
 
 ## Getting Started
@@ -40,7 +43,7 @@ The process of Q-Seg utilizing the D-Wave quantum annealer is illustrated in the
 ### Installation
 Clone the repository and install the required packages:
 ```
-git clone https://github.com/yourusername/Q-seg.git
+git clone https://github.com/supreethmv/Q-seg.git
 cd Q-seg
 pip install -r requirements.txt
 ```
@@ -110,12 +113,17 @@ Q-Seg/
 ## Citation
 If you find Q-Seg useful in your research, please consider citing our paper:
 ```
-@article{venkatesh2023q,
-  title={Q-Seg: Quantum Annealing-based Unsupervised Image Segmentation},
+@ARTICLE{10669751,
   author={Venkatesh, Supreeth Mysore and Macaluso, Antonio and Nuske, Marlon and Klusch, Matthias and Dengel, Andreas},
-  journal={arXiv preprint arXiv:2311.12912},
-  year={2023}
-}
+  journal={IEEE Computer Graphics and Applications}, 
+  title={Q-Seg: Quantum Annealing-Based Unsupervised Image Segmentation}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-13},
+  keywords={Image segmentation;Quantum computing;Annealing;Quantum annealing;Image edge detection;Optimization;Measurement},
+  doi={10.1109/MCG.2024.3455012}
+  }
 ```
 
 
