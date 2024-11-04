@@ -4,6 +4,7 @@ from dwave.system.samplers import DWaveSampler
 from dwave.system.composites import EmbeddingComposite
 from qiskit_optimization.applications import Maxcut
 import networkx as nx
+import numpy as np
 
 def dwave_solver(linear, quadratic, private_token, runs=10000, **kwargs):
   """
