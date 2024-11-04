@@ -2,3 +2,6 @@ qiskit_optimization
 pylatexenc
 dwave-ocean-sdk
 gurobipy
+matplotlib
+pandas
+ipykernel
