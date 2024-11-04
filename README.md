@@ -81,6 +81,7 @@ Q-Seg/
 │ └── operational_pipeline.png
 │ └── overview_pipeline.png
 │
+└── tutorial.ipynb 
 ├── requirements.txt 
 └── README.md 
 ```
@@ -93,7 +94,10 @@ Q-Seg/
 - **utils.py**: Features the `decode_binary_string` function, useful for general utility purposes across the project.
 
 ### Example Notebooks
-- **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of Q-Seg functions on a toy example, providing a step-by-step walkthrough of the algorithm.
+
+- **tutorial.ipynb**: Located in the root directory, this notebook demonstrates the usage of Q-Seg on a sample 3 $\times$ 3 image, running the algorithm on the D-Wave Quantum Annealer accessible remotely as a cloud service. Also contains the code for solving the graph-based image segmentation task locally using classical state-of-the-art method *Gurobi*. 
+
+- **q_seg_pipeline.ipynb**: Located in the `examples` directory, this Jupyter notebook demonstrates the usage of *Q-Seg* functions on a toy example, providing a step-by-step walkthrough of the algorithm.
 
 -**Annealer_vs_Gurobi_experiments.ipynb**: Contains code to run experiments on a synthetic dataset.
 - **plots.ipynb**: Used for parsing logged data and generating plots as shown in the paper.
