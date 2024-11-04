@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-def gaussian_similarity(a, b, sigma):
+def gaussian_similarity(a, b, sigma = 0.5):
   """
   Calculate the Gaussian similarity score between two values.
 
