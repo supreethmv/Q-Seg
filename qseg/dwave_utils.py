@@ -2,7 +2,6 @@ import time
 import dimod
 from dwave.system.samplers import DWaveSampler
 from dwave.system.composites import EmbeddingComposite
-from qiskit_optimization.applications import Maxcut
 import networkx as nx
 import numpy as np
 
@@ -36,6 +35,19 @@ def dwave_solver(linear, quadratic, private_token, runs=10000, **kwargs):
   response_time = time.time() - start_time
   return sample_set, connection_time, embedding_time, response_time
 
+def get_linear_quadratic_dict(W):
+    """Computes the QUBO matrix for the Minimum Cut problem given a weight matrix W."""
+    n = W.shape[0]  # Number of nodes
+    linear = {}
+    quadratic = {}
+    
+    for i in range(n):
+        linear[i] = np.sum(W[i])  # Diagonal terms (degree of node)
+        for j in range(n):
+            if i < j and W[i, j]!=0:
+                quadratic[(i, j)] = -W[i, j]  # Off-diagonal terms (negative adjacency)
+    return linear,quadratic
+
 def annealer_solver(G, private_token, n_samples=2000, **kwargs):
   """
   Solve the Maxcut problem on graph G using a D-Wave annealer.
@@ -50,13 +62,8 @@ def annealer_solver(G, private_token, n_samples=2000, **kwargs):
   dict: Dictionary containing information about execution times.
   """
   start_time = time.time()
-  w = -1 * nx.adjacency_matrix(G).todense()
-  max_cut = Maxcut(w)
-  qp = max_cut.to_quadratic_program()
-  linear = qp.objective.linear.coefficients.toarray(order=None, out=None)
-  quadratic = qp.objective.quadratic.coefficients.toarray(order=None, out=None)
-  linear = {int(idx):-round(value,2) for idx,value in enumerate(linear[0])}
-  quadratic = {(int(iy),int(ix)):-quadratic[iy, ix] for iy, ix in np.ndindex(quadratic.shape) if iy<ix and abs(quadratic[iy, ix])!=0}
+  w = nx.adjacency_matrix(G).todense()
+  linear,quadratic = get_linear_quadratic_dict(w)
   problem_formulation_time = time.time() - start_time
   sample_set, connection_time, embedding_time, response_time = dwave_solver(linear, quadratic, private_token, runs=n_samples)
   info_dict = sample_set.info['timing'].copy()
